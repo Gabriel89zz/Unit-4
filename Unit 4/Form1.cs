@@ -22,7 +22,6 @@ namespace Unit_4
             chartSalary.ChartAreas[0].AxisY.Title = "Salary";
         }
 
-        // Add employee to the list
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             try
@@ -51,14 +50,12 @@ namespace Unit_4
             }
         }
 
-        // Update the DataGridView with employee data
         private void UpdateTable()
         {
             dataGridViewEmployees.DataSource = null;
             dataGridViewEmployees.DataSource = employees;
         }
 
-        // Update the chart with salary distribution
         private void UpdateChart()
         {
             chartSalary.Series["Salary"].Points.Clear();
@@ -82,21 +79,12 @@ namespace Unit_4
             }
         }
 
-        // Clear input fields
         private void ClearFields()
         {
             txtName.Clear();
             txtDepartment.Clear();
             txtSalary.Clear();
         }
-    }
-
-    // Employee class to store employee details
-    public class Employee
-    {
-        public string Name { get; set; }
-        public string Department { get; set; }
-        public decimal Salary { get; set; }
     }
 }
 
